@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jspsych.js"></script>
+    <script src="plugins/jspsych-survey-multi-choice.js"></script>
+    <link rel="stylesheet" href="css/jspsych.css">
+      <!-- jsPsychSheet library -->
+<script src="https://brain2ai.github.io/jsPsychSheet/jspsychsheet.js"></script>
+<link rel="stylesheet" href="https://brain2ai.github.io/jsPsychSheet/jspsychsheet.css">
+<title>RT eexperiment</title>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    
+    </body>
+  <script>
+
+  // definiting two different response scales that can be used.
+  var page_1_options = ["Rozhodně nesouhlasím", "Nesouhlasím", "Neutral", "Souhlasím", "Rozhodně souhlasím"];
+  var page_2_options = ["Ano", "Ne"];
+  var page_3_options = ["OK"];
+
+
+
+       var multi_choice_block = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Při řešení problémů mám víru ve své schopnosti.", name: 'D1', options: page_2_options, required:true}, 
+    ],
+  };
+      
+      var multi_choice_block2 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Zaměřuji se na negativní aspekty života.", name: 'D2', options: page_2_options, required: true}, 
+    ],
+  };
+      var multi_choice_block3 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Boudoucnost vypadá slibně.", name: 'D3', options: page_2_options, required: true}, 
+    ],
+  };
+      var multi_choice_block4 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Často přemýšlím nad tím, co se může pokazit.", name: 'D4', options: page_2_options, required: true}, 
+    ],
+  };
+    var multi_choice_block5 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Když se objeví výzva, jsem přesvědčen, že ji překonám.", name: 'D5', options: page_2_options, required: true}, 
+    ],
+  };
+      var multi_choice_block6 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Dosahuji většiny cílů, které si vytyčím.", name: 'D6', options: page_2_options, required: true}, 
+    ],
+  };
+      var multi_choice_block7 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Špatné zprávy mě paralyzují.", name: 'D7', options: page_2_options, required: true}, 
+    ],
+  };
+      var multi_choice_block8 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Vždy očekávám to nejhorší.", name: 'D8', options: page_2_options, required: true}, 
+    ],
+  };
+      var multi_choice_block9 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "V těžkých časech se zaměřuji na kladné stránky života.", name: 'D9', options: page_2_options, required: true}, 
+    ],
+  };
+      var multi_choice_block10 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Ve všem, co dělám, shledávám těžkosti.", name: 'D10', options: page_2_options, required: true}, 
+    ],
+  };
+      var multi_choice_block11 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Často přemýšlím nad tím, co se může pokazit.", name: 'D11', options: page_2_options, required: true}, 
+    ],
+  };
+      var multi_choice_block12 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Výsledek mé činnosti je z větší části v mých rukou.", name: 'D12', options: page_2_options, required: true}, 
+    ],
+  };
+  var multi_choice_block13 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Považuji se za sebevědomého člověka.", name: 'D13', options: page_2_options, required: true}, 
+    ],
+  };
+  var multi_choice_block14 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "v následující části vyplníte 6 nových položek. Vaším úkolem je určit, zda s daným tvrzením souhlasíte (ano), či nesouhlasíte (ne).", name: 'M2', options: page_3_options, required: true}, 
+    ],
+  };
+  var multi_choice_block15 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "V mém životě převažuje naděje nad úzkostí.", name: 'H1', options: page_2_options, required:true}, 
+    ],
+  };
+  var multi_choice_block16= {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Moje naděje se obvykle naplňují.", name: 'H2', options: page_2_options, required: true}, 
+    ],
+  };
+        var multi_choice_block17 = {
+    type: 'Cítím naději.',
+    questions: [
+      {prompt: "Boudoucnost vypadá slibně", name: 'H3', options: page_2_options, required: true}, 
+    ],
+  };
+       var multi_choice_block18 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Naděje zvyšuje kvalitu mého života.", name: 'H4', options: page_2_options, required: true}, 
+    ],
+  };
+
+      var multi_choice_block19 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Ohledně svého života jsem plný/á naděje.", name: 'H5', options: page_2_options, required: true}, 
+    ],
+  };
+
+
+  var multi_choice_block20 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "I v těžkých časech si dokážu udržet naději.", name: 'H6', options: page_2_options, required: true}, 
+    ],
+  };
+
+
+
+
+
+  var multi_choice_block21 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "v následující části vyplníte opět 1. metodu, ale tentokrát máte na výběr více možností.", name: 'M3', options: page_3_options, required: true}, 
+    ],
+  };
+
+
+
+  var multi_choice_block22 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Při řešení problémů mám víru ve své schopnosti.", name: 'O1', options: page_1_options, required:true}, 
+    ],
+  };
+      
+  var multi_choice_block23 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Zaměřuji se na negativní aspekty života.", name: 'O2', options: page_1_options, required: true}, 
+    ],
+  };
+        var multi_choice_block24 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Boudoucnost vypadá slibně.", name: 'O3', options: page_1_options, required: true}, 
+    ],
+  };
+      
+       var multi_choice_block25 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Často přemýšlím nad tím, co se může pokazit.", name: 'O4', options: page_1_options, required: true}, 
+    ],
+  };
+
+      var multi_choice_block26 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Když se objeví výzva, jsem přesvědčen, že ji překonám.", name: 'O5', options: page_1_options, required: true}, 
+    ],
+  };
+
+
+  var multi_choice_block27 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Dosahuji většiny cílů, které si vytyčím.", name: 'O6', options: page_1_options, required: true}, 
+    ],
+  };
+
+
+  var multi_choice_block28 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Špatné zprávy mě paralyzují.", name: 'O7', options: page_1_options, required: true}, 
+    ],
+  };
+
+
+
+
+  var multi_choice_block29 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Vždy očekávám to nejhorší.", name: 'O8', options: page_1_options, required: true}, 
+    ],
+  };
+
+
+
+
+  var multi_choice_block30 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "V těžkých časech se zaměřuji na kladné stránky života.", name: 'O9', options: page_1_options, required: true}, 
+    ],
+  };
+
+
+
+
+  var multi_choice_block31 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Ve všem, co dělám, shledávám těžkosti.", name: 'O10', options: page_1_options, required: true}, 
+    ],
+  };
+
+
+
+
+    var multi_choice_block32 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Často přemýšlím nad tím, co se může pokazit.", name: 'O11', options: page_1_options, required: true}, 
+    ],
+  };
+
+  
+
+
+    var multi_choice_block33 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Výsledek mé činnosti je z větší části v mých rukou.", name: 'O12', options: page_1_options, required: true}, 
+    ],
+  };
+
+
+    var multi_choice_block34 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Považuji se za sebevědomého člověka.", name: 'O13', options: page_1_options, required: true}, 
+    ],
+  };
+
+
+
+
+
+      var multi_choice_block35 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Před Vámi je poslední část, v níž odpovíte opět na druhou metodu, při které máte na výběr z 5 možností.", name: 'M4', options: page_3_options, required: true}, 
+    ],
+  };
+
+
+      var multi_choice_block36 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "V mém životě převažuje naděje nad úzkostí.", name: 'N1', options: page_1_options, required:true}, 
+    ],
+  };
+      
+      var multi_choice_block37= {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Moje naděje se obvykle naplňují.", name: 'N2', options: page_1_options, required: true}, 
+    ],
+  };
+        var multi_choice_block38 = {
+    type: 'Cítím naději.',
+    questions: [
+      {prompt: "Boudoucnost vypadá slibně", name: 'N3', options: page_1_options, required: true}, 
+    ],
+  };
+      
+       var multi_choice_block39 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Naděje zvyšuje kvalitu mého života.", name: 'N4', options: page_1_options, required: true}, 
+    ],
+  };
+
+      var multi_choice_block40 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "Ohledně svého života jsem plný/á naděje.", name: 'N5', options: page_1_options, required: true}, 
+    ],
+  };
+
+
+      var multi_choice_block41 = {
+    type: 'survey-multi-choice',
+    questions: [
+      {prompt: "I v těžkých časech si dokážu udržet naději.", name: 'N6', options: page_1_options, required: true}, 
+    ],
+  };
+
+
+
+
+
+
+
+
+
+  jsPsych.init({
+    timeline: [multi_choice_block, multi_choice_block2 ,multi_choice_block3, multi_choice_block4, multi_choice_block5, multi_choice_block6,multi_choice_block7,multi_choice_block8,multi_choice_block9,multi_choice_block10,multi_choice_block11,multi_choice_block12,multi_choice_block13,multi_choice_block14,multi_choice_block15,multi_choice_block16,multi_choice_block17,multi_choice_block18,multi_choice_block19,multi_choice_block20,multi_choice_block21,multi_choice_block22,multi_choice_block23,multi_choice_block24,multi_choice_block25,multi_choice_block26,multi_choice_block27,multi_choice_block28,multi_choice_block29,multi_choice_block30,multi_choice_block31,multi_choice_block32,multi_choice_block33,multi_choice_block34,multi_choice_block35,multi_choice_block36,multi_choice_block37,multi_choice_block38,multi_choice_block39,multi_choice_block40,multi_choice_block41],
+  on_finish: function () {
+    url = "https://script.google.com/macros/s/AKfycbw3rvXJ9Ti4zdxMLOjmvyEy3ab96_80rHDzyKfWtDqH0JAuQxHXzd2rEPZKFie06_4n/exec";
+    jsPsychSheet.uploadData(url, jsPsych.data.get().csv())
+  }
+});
+
+
+  </script>
+</html>
